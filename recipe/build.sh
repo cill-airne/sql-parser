@@ -1,3 +1,3 @@
 #!/bin/bash
-make VERBOSE=1
-make DESTDIR="$PREFIX" install
+cmake -DCMAKE_INSTALL_PREFIX=$PREFIX $SRC_DIR -DCMAKE_INSTALL_LIBDIR=lib
+make install

@@ -1,0 +1,1 @@
+cmake -DCMAKE_CXX_COMPILER=$CONDA_PREFIX/bin/clang++ -DCMAKE_PREFIX_PATH=~/code/saighead-dev/src -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G 'Unix Makefiles' ..
