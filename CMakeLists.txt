@@ -47,5 +47,5 @@ add_library(sql-parser SHARED src/parser/bison_parser.cpp
 
 install(TARGETS sql-parser
         LIBRARY DESTINATION lib
-        INCLUDES DESTINATION include
-        )
+        PUBLIC_HEADER DESTINATION include
+        INCLUDES DESTINATION include)
