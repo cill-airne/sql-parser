@@ -50,7 +50,6 @@ install(TARGETS sql-parser
         EXPORT sql-parser-targets
         DESTINATION lib) 
 
-
 # includes
 install(FILES 
     src/SQLParser.h 
