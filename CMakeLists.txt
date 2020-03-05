@@ -45,11 +45,14 @@ add_library(sql-parser SHARED src/parser/bison_parser.cpp
 
 )
 
+# lib dir
 install(TARGETS sql-parser
-        LIBRARY DESTINATION lib
-        PUBLIC_HEADER DESTINATION include)
+        EXPORT sql-parser-targets
+        DESTINATION lib) 
 
 
-install(FILES src/SQLParser.h src/SQLParserResult.h
-    DESTINATION include
-)
+# includes
+install(FILES 
+    src/SQLParser.h 
+    src/SQLParserResult.h
+    DESTINATION include)
