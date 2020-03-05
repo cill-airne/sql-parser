@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 
-project(arrow LANGUAGES CXX)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -47,7 +45,10 @@ add_library(sql-parser SHARED src/parser/bison_parser.cpp
 
 # lib dir
 install(TARGETS sql-parser
-        EXPORT sql-parser-targets
+        EXPORT SQLParser-targets
+        DESTINATION lib) 
+
+install(EXPORT SQLParser-targets
         DESTINATION lib) 
 
 # includes
