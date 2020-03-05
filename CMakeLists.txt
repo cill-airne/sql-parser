@@ -50,7 +50,6 @@ install(TARGETS sql-parser
         PUBLIC_HEADER DESTINATION include)
 
 
-install(DIRECTORY src/
+install(FILES src/SQLParser.h src/SQLParserResult.h
     DESTINATION include
-    FILES_MATCHING PATTERN "*.h*"
 )
