@@ -60,4 +60,4 @@ install(EXPORT SQLParserConfig
 install(FILES 
     src/SQLParser.h 
     src/SQLParserResult.h
-    DESTINATION include)
+    DESTINATION include/hsql)
