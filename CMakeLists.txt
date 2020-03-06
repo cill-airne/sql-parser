@@ -45,11 +45,16 @@ add_library(sql-parser SHARED src/parser/bison_parser.cpp
 
 # lib dir
 install(TARGETS sql-parser
-        EXPORT SQLParser-targets
+        EXPORT SQLParserConfig
         DESTINATION lib) 
 
-install(EXPORT SQLParser-targets
-        DESTINATION lib) 
+export(TARGETS sql-parser 
+        NAMESPACE SQLParser:: 
+        FILE "$CMAKE_CURRENT_BINARY_DIR}/SQLParserConfig.cmake")
+
+install(EXPORT SQLParserConfig
+        DESTINATION "${CMAKE_INSTALL_DATADIR}/SQLParser/cmake" 
+        NAMESPACE SQLParser::)
 
 # includes
 install(FILES 
