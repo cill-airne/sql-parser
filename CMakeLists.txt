@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 
+project(SQLParser)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -7,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_library(sql-parser SHARED src/parser/bison_parser.cpp
+add_library(SQLParser SHARED src/parser/bison_parser.cpp
                                 src/parser/bison_parser.h
                                 src/parser/flex_lexer.h
                                 src/parser/flex_lexer.cpp
