@@ -57,7 +57,6 @@ install(EXPORT SQLParserConfig
         NAMESPACE SQLParser::)
 
 # includes
-install(FILES 
-    src/SQLParser.h 
-    src/SQLParserResult.h
-    DESTINATION include/hsql)
+install(DIRECTORY src
+    DESTINATION include/hsql
+    FILES_MATCHING PATTERN "*.h*")
