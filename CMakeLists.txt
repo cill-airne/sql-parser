@@ -50,10 +50,10 @@ install(TARGETS sql-parser
 
 export(TARGETS sql-parser 
         NAMESPACE SQLParser:: 
-        FILE "$CMAKE_CURRENT_BINARY_DIR}/SQLParserConfig.cmake")
+        FILE "${CMAKE_CURRENT_BINARY_DIR}/SQLParserConfig.cmake")
 
 install(EXPORT SQLParserConfig
-        DESTINATION "${CMAKE_INSTALL_DATADIR}/SQLParser/cmake" 
+        DESTINATION "lib/cmake/SQLParser" 
         NAMESPACE SQLParser::)
 
 # includes
